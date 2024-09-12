@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const router = useRouter();
 const route = useRoute();
 const names = ref({
   'daniel': 'Bobby Blaze',
@@ -32,10 +31,33 @@ const backgrounds = ref({
   'jacob': "When I was a child, everyone said I was really funny. I was always clowning around at school. The teachers didn't seem to appreciate it, though. I don't know why! When I found out that my great-grandfather had been a clown, I decided that was what I wanted to do. When Starlight visited my little town when I was 18, I marched in and asked Dani for a job. I had them roaring with laughter after five minutes and I've worked here ever since."
 });
 
+const countdown = ref(120);
+const flip = ref(false);
+let interval: any = null;
+
 const imageSrc = computed(()=>{
   return "/img/" + route.params.name + '.svg';
 });
 
+const reveal = computed(()=>{
+  return countdown.value <= 0;
+});
+
+const scaleClass = computed(()=>{
+  return (flip.value) ? '-scale-100' : '';
+});
+
+onBeforeMount(() => {
+    interval = setInterval(()=>{
+        countdown.value -= 1;
+        if (countdown.value % 20 == 0) {
+          flip.value = !flip.value;
+        }
+        if (reveal.value) {
+          clearInterval(interval);
+        }
+    }, 30);
+  });
 
 </script>
 
@@ -46,28 +68,34 @@ const imageSrc = computed(()=>{
     </div>
     <h1 class="text-7xl"><span class="text-red-600">Murder</span> Mystery at the Circus</h1>
     <div class="text-xl">
-      <p>You are invited to embarc on an evening of intrigue, deceit and wrongdoing at the starlight curcus set in 1905.
+      <p>On the <span class="text-red-600">28th of September</span>, you are invited to embarc on an evening of intrigue, deceit and wrongdoing at the starlight curcus set in 1905.
       </p>
       <p>Can you work out whodunnit?</p>      
-    </div>   
-    <div class="border p-6 grid gap-3 relative" v-if="names[route.params.name]">
+    </div>    
+    <div class="border p-6 grid gap-3 relative min-h-96" v-if="names[route.params.name]">
       <div class="flex gap-5">
-        <h4 class="text-4xl">Your role is...</h4>
-      </div>      
-      <div class="grid grid-cols-[auto_1fr] gap-x-5 gap-y-3">      
-        <span class="text-yellow-500">Name: </span>
+        <h4 class="text-4xl">And your role is...</h4>
+      </div>
+      <div v-if="reveal">
+      <div class="grid grid-cols-[auto_1fr] gap-x-5 gap-y-3">
+        <span class="text-red-600">Name: </span>
           <span>{{ names[route.params.name] }}</span>          
-        <span class="text-yellow-500">Occupation: </span>
+        <span class="text-red-600">Occupation: </span>
         <span>{{ occupations[route.params.name] }} at Starlight Circus</span>
-        <span class="text-yellow-500">Background: </span>
+        <span class="text-red-600">Background: </span>
         <span>{{ backgrounds[route.params.name] }}</span>
       </div> 
       <img :src="imageSrc" class="size-40 mx-auto">
+    </div>
+    <div v-else>
+      <img :src="`/img/eyes.svg`" :class="`size-40 mx-auto ${scaleClass}`">
+    </div>
     </div>
     <div class="flex w-full text-orange-500 text-3xl items-center py-4" v-else>
       Sorry guest not found...
     </div>
   </div>
+
 </template>
 
 <style scoped></style>

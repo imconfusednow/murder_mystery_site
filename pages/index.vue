@@ -35,13 +35,14 @@
     <h1 class="text-7xl text-balance md:text-wrap">You are invited to a day of food and night of <span class="text-red-600">murder...</span></h1>
     <div class="grid gap-2 text-gray-300">
       <blockquote class="w-fit my-8 text-zinc-400 text-2xl text-wrap">Roll up, roll up and join us for an unforgettable night at the
-        world famous Starlight Circus!</blockquote>        
+        world famous Starlight Circus!</blockquote>
         
     </div>
-    <p class="text-wrap text-lg">The lights are
+    <TypeWriter class="text-wrap text-lg min-h-44 md:min-h-16" frequency="20" text="The lights are low and the acts are limbering up under the Big Top but who is lurking in the shadows? The real show is only just beginning! Stretch your muscles and your mind to piece together the clues and identify the killer amongst you." />
+    <!-- <p class="text-wrap text-lg">The lights are
         low and the acts are limbering up under the Big Top - but who is lurking in the shadows? The real show is only
         just beginning! Stretch your muscles and your mind to piece together the clues and identify the killer amongst you.
-      </p>    
+      </p>     -->
     <div class="mx-auto gap-10 w-full grid grid-cols-3">
       <img class="" src="/img/burger.svg"/>
       <img class="" src="/img/circus.svg"/>
