@@ -7,8 +7,9 @@ const names = ref({
   'dad': 'Juan Wheel',
   'mum': 'Krystal Ball',
   'chloe': 'Sam O Salt',
-  'claire': 'Vee Sharpe',
-  'jacob': 'Hugh G Shooz'
+  'steve': 'Vee Sharpe',
+  'jacob': 'Hugh G Shooz',
+  'claire': 'Donna Droppitt'
 });
 const occupations = ref({
   'daniel': 'Fire Eater',
@@ -16,9 +17,10 @@ const occupations = ref({
   'edward': 'Strongman',
   'dad': 'Unicyclist',
   'mum': 'Fortune Teller',
-  'chloe': 'Fire Eater',
-  'claire': 'Fire Eater',
-  'jacob': 'Fire Eater'
+  'chloe': 'Acrobat',
+  'steve': 'Knife Thrower',
+  'jacob': 'Clown',
+  'claire': 'Juggler'
 });
 const backgrounds = ref({
   'daniel': "If I wasn't working here I'd probably be in Prison! I used to get into a lot of trouble for setting fire to things, but I was just really interested in flames and how they behave. I got into fire eating accidenally, really. I was in my room, with a small iece of lit wood, just staring at the flame, and I heard my dad coming up the stairs. I panicked and just stuck it in my mouth to put it out! It hurt a bit and I couldn't eat for a week but I was hooked. I went to the library and learned everyrthing I could about the fmaous 18th century fire eater, Robert Powell. After a couple of years, and a few trips to the hospital, I'd perfected my art and got myself this amazing job with the best circus in the world.",
@@ -27,8 +29,9 @@ const backgrounds = ref({
   'dad': "I was a very acedemic student and my parents thought I was going to be a doctor, but I found an old unicycle in the cellar when I was 10 and that was that. I can't ride a normal bicycle - too many wheels! I've worked at all the top circuses but Starlight is my favourite. I'm never leaving!",
   'mum': "I come from a long line of fortune tellers — the women in my family have been doing it for about 200 years. It's not something you can learn. You're either born with it or you're not. Sometimes I don't even need to concentrate. For example, the other day, in the middle of supper, it simply came to me that the strange French painter, Cézanne, is going to die next year. Mark my words. You'll see. Anyway, there's always a long line of people waiting to see me here at Starlight. People always want to know what's in store for them.",
   'chloe': "I've been a performer with Starlight for my entire life. My mother, God rest her soul, was an acrobat here and I was born in one of the caravans. I think I could do cartwheels and handsprings before I could walk properly. There's something very dull about just walking normally, don't you think? Being the right way up all the time bores me senseless. Everyone here at Starlight is my family maybe not blood relations, but family nonetheless. I'll be here till the day I die.",
-  'claire': "My dad was a scrap iron merchant and knife sharpener. I used to go round on the horse and cart with him and I was always more interested in the knives than anything else. One day, just for fun, I threw a knife at a scarecrow and I got him right between the eyes. Later that year, my parents took me to the circus and I saw a professional knife thrower for the first time. I couldn't stop thinking about it and I secretly practised in the fields near our house. When Starlight came to town a few years later, I convinced Dani to come and see what I could do and I was hired on the spot. I've been here eight years now and I still love the gasps from the crowd as I send my daggers sailing through the air, hitting the backboard just inches from my 'victim'!",
-  'jacob': "When I was a child, everyone said I was really funny. I was always clowning around at school. The teachers didn't seem to appreciate it, though. I don't know why! When I found out that my great-grandfather had been a clown, I decided that was what I wanted to do. When Starlight visited my little town when I was 18, I marched in and asked Dani for a job. I had them roaring with laughter after five minutes and I've worked here ever since."
+  'steve': "My dad was a scrap iron merchant and knife sharpener. I used to go round on the horse and cart with him and I was always more interested in the knives than anything else. One day, just for fun, I threw a knife at a scarecrow and I got him right between the eyes. Later that year, my parents took me to the circus and I saw a professional knife thrower for the first time. I couldn't stop thinking about it and I secretly practised in the fields near our house. When Starlight came to town a few years later, I convinced Dani to come and see what I could do and I was hired on the spot. I've been here eight years now and I still love the gasps from the crowd as I send my daggers sailing through the air, hitting the backboard just inches from my 'victim'!",
+  'jacob': "When I was a child, everyone said I was really funny. I was always clowning around at school. The teachers didn't seem to appreciate it, though. I don't know why! When I found out that my great-grandfather had been a clown, I decided that was what I wanted to do. When Starlight visited my little town when I was 18, I marched in and asked Dani for a job. I had them roaring with laughter after five minutes and I've worked here ever since.",
+  'claire': "I used to drive my brother crazy by stealing his marbles and practising my juggling. Nothing was safe in the house. I don't know how many of my mum's vases I broke and then there was the incident with my dad's favourite whiskey glass. But practice makes perfect, as they say, and I'm now the most famous juggler in the world. Dani pached me from the Zabinskis in Moscow. If I'd known the Zabinskis were only going to pay me a rouble a month, I'd never have joined them! Starlight Circus saved me from abject performing poverty."
 });
 
 const countdown = ref(120);
