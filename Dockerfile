@@ -11,7 +11,7 @@ RUN apk add git
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
-RUN npm --verbose install
+RUN npm install
 RUN npm run build
 
 EXPOSE 3000
